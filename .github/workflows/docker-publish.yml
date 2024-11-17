@@ -17,7 +17,7 @@ jobs:
         run: echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u huanthree --password-stdin
 
       - name: Build Docker image
-        run: docker build . -t ghcr.io/huanthree/coyeb-node:latest
+        run: docker build . -t ghcr.io/huanthree/nodejs:latest
 
       - name: Push Docker image
-        run: docker push ghcr.io/huanthree/coyeb-node:latest
+        run: docker push ghcr.io/huanthree/nodejs:latest
